@@ -70,8 +70,8 @@ const Services: React.FC = () => {
   };
 
   // Servicios a mostrar en el slide actual
-  const startIdx = active * slidesToShow;
-  const visibleServices = services.slice(startIdx, startIdx + slidesToShow);
+  // const startIdx = active * slidesToShow;
+  // const visibleServices = services.slice(startIdx, startIdx + slidesToShow);
 
   return (
     <section className="services" id="services">

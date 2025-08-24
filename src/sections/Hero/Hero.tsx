@@ -131,7 +131,7 @@ const Hero: React.FC = () => {
           <div className="hero-buttons">
             <a href="#contact" className="cta-btn">Solicitar Cotización</a>
             <a
-              href="https://wa.me/525512345678?text=Hola%2C%20me%20interesa%20una%20cotizaci%C3%B3n."
+              href="https://wa.me/525547656048?text=Hola%2C%20me%20interesa%20una%20cotizaci%C3%B3n."
               className="whatsapp-btn"
               target="_blank"
               rel="noopener noreferrer"
