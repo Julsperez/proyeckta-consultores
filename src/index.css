@@ -45,3 +45,12 @@ main {
     max-width: 1140px;
   }
 }
+
+.header-spacer {
+  height: 64px; /* Altura del header en desktop */
+}
+@media (max-width: 767px) {
+  .header-spacer {
+    height: 56px; /* Altura del header en móvil */
+  }
+}

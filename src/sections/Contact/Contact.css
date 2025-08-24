@@ -80,6 +80,25 @@
   background: #fff;
 }
 
+.contact-form select {
+  padding: 0.875rem;
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+  font-size: 1rem;
+  background: #f8f9fa;
+  color: #222;
+  transition: border-color 0.3s ease;
+  margin-bottom: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.contact-form select:focus {
+  outline: none;
+  border-color: #F37C20;
+  background: #fff;
+}
+
 .contact-form textarea {
   min-height: 120px;
 }

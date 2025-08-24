@@ -1,0 +1,13 @@
+:root {
+  /* Colores principales */
+  --color-azul-marino: #09304F;   /* Azul corporativo oscuro */
+  --color-azul-marino-2: #002A47; /* Variación más profunda */
+  --color-blanco: #FFFFFF;        /* Fondo neutro / texto claro */
+
+  /* Colores de acento */
+  --color-naranja: #F37C20;       /* Acento en iconografía y CTAs */
+
+  /* Tonos complementarios */
+  --color-azul-oscuro-1: #06344E;
+  --color-azul-oscuro-2: #002848;
+}
