@@ -24,7 +24,7 @@ const Hero: React.FC = () => (
         </div>
       </div>
       <div className="hero-image">
-        <img src="/img/React.svg" alt="Consultoría en seguridad, higiene, protección civil y gestión ambiental" />
+        {/* <img src="/img/React.svg" alt="Consultoría en seguridad, higiene, protección civil y gestión ambiental" /> */}
         <ResponsiveImg base="image-1" alt="Descripción de image-1" customSizes={[640, 1280]} loading="eager" />
       </div>
     </div>
