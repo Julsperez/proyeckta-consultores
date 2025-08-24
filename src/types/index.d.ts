@@ -30,4 +30,11 @@ declare module '*.jpeg' {
 declare module '*.webp' {
   const content: string;
   export default content;
+}
+
+declare interface ImportMeta {
+  readonly env: {
+    readonly BASE_URL: string;
+    // otras variables de entorno si las necesitas
+  };
 } 

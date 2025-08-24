@@ -6,6 +6,7 @@ type Props = {
     width?: number;      // opcional, por defecto 1280
     height?: number;     // opcional, por defecto 720
     customSizes?: number[]; // opcional, resoluciones personalizadas disponibles
+    baseUrl?: string; // nueva prop para la base
   };
   
   export default function ResponsiveImg({
@@ -16,6 +17,7 @@ type Props = {
     width = 1280,
     height = 720,
     customSizes,
+    baseUrl = '/', // valor por defecto
   }: Props) {
     // Usar customSizes si se proporciona, sino usar los tamaños estándar
     const sizes = customSizes || [640, 1280, 1920];
@@ -25,12 +27,12 @@ type Props = {
     
     // Generar dinámicamente el srcSet con la ruta correcta
     const srcSet = sortedSizes
-      .map(size => `/img/optimized/${base}-${size}.jpg ${size}w`)
+      .map(size => `${baseUrl}img/optimized/${base}-${size}.jpg ${size}w`)
       .join(', ');
     
     // Fallback: segundo tamaño si existe, sino el primero
     const fallbackSize = sortedSizes.length > 1 ? sortedSizes[1] : sortedSizes[0];
-    const fallbackSrc = `/img/optimized/${base}-${fallbackSize}.jpg`;
+    const fallbackSrc = `${baseUrl}img/optimized/${base}-${fallbackSize}.jpg`;
   
     return (
       <img

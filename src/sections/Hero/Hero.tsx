@@ -3,6 +3,8 @@ import './Hero.css';
 import ResponsiveImg from '../../components/ResponsiveImg/ResponsiveImg';
 // import ResponsiveImg from '../../components/ResponsiveImg/ResponsiveImg';
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const Hero: React.FC = () => (
   <section className="hero" id="hero">
     <div className="hero-content">
@@ -24,8 +26,8 @@ const Hero: React.FC = () => (
         </div>
       </div>
       <div className="hero-image">
-        {/* <img src="/img/React.svg" alt="Consultoría en seguridad, higiene, protección civil y gestión ambiental" /> */}
-        <ResponsiveImg base="image-1" alt="Descripción de image-1" customSizes={[640, 1280]} loading="eager" />
+        {/* <img src={`${baseUrl}img/React.svg`} alt="Consultoría en seguridad, higiene, protección civil y gestión ambiental" /> */}
+        <ResponsiveImg base="image-1" alt="Descripción de image-1" customSizes={[640, 1280]} loading="eager" baseUrl={baseUrl} />
       </div>
     </div>
   </section>
