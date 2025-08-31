@@ -1,0 +1,62 @@
+.location-section {
+  padding: 2.5rem 1rem;
+  background: #ffffff;
+  text-align: center;
+}
+
+.location-section .services-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+  color: var(--color-azul-marino, #09304F);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.location-address {
+  margin-bottom: 1.5rem;
+}
+
+.location-address p {
+  font-size: 1.08rem;
+  color: #555;
+  margin: 0 auto;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.map-embed {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 35%);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.map-embed iframe {
+  display: block;
+  width: 100%;
+  height: 320px;
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  .location-section {
+    padding: 3.5rem 2rem;
+  }
+  .map-embed iframe {
+    height: 420px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .location-section {
+    padding: 4rem 3rem;
+  }
+  .map-embed {
+    max-width: 900px;
+  }
+  .location-address p {
+    font-size: 1.15rem;
+    max-width: 700px;
+  }
+}

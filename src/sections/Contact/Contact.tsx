@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { FaWhatsapp, FaPhone } from 'react-icons/fa';
 import './Contact.css';
 
 export interface ContactFormProps {
@@ -15,10 +14,9 @@ export interface ContactFormProps {
 const initialForm = { name: '', email: '', service: '', message: '' };
 
 const ContactForm: React.FC<ContactFormProps> = ({
-  showHeader = true,
   className = '',
   style = {},
-  buttonColor = '#F37C20',
+  buttonColor = 'var(--color-mostaza)',
   buttonText = 'Enviar Mensaje',
   serviceOptions,
   defaultService = '',
@@ -44,58 +42,72 @@ const ContactForm: React.FC<ContactFormProps> = ({
     const validationErrors = validate();
     setErrors(validationErrors);
     if (Object.keys(validationErrors).length === 0) {
-      // Aquí puedes manejar el envío del formulario
       alert('Mensaje enviado');
       setForm({ ...initialForm, service: defaultService });
     }
   };
 
   return (
-    <form className={`contact-form ${className}`} style={style} onSubmit={handleSubmit} noValidate>
-      {showHeader && <h2>Contáctanos</h2>}
-      <input
-        type="text"
-        name="name"
-        placeholder="Nombre*"
-        value={form.name}
-        onChange={handleChange}
-      />
-      {errors.name && <span className="error">{errors.name}</span>}
-      <input
-        type="email"
-        name="email"
-        placeholder="Correo*"
-        value={form.email}
-        onChange={handleChange}
-      />
-      {errors.email && <span className="error">{errors.email}</span>}
-      {serviceOptions && (
-        <select
-          name="service"
-          value={form.service}
-          onChange={handleChange}
-        >
-          <option value="">Servicio requerido*</option>
-          {serviceOptions.map((opt, i) => (
-            <option value={opt} key={i}>{opt}</option>
-          ))}
-        </select>
-      )}
-      {errors.service && <span className="error">{errors.service}</span>}
-      <textarea
-        name="message"
-        placeholder="Mensaje*"
-        value={form.message}
-        onChange={handleChange}
-      />
-      {errors.message && <span className="error">{errors.message}</span>}
-      <button
-        type="submit"
-        style={{ background: buttonColor, color: '#fff', borderRadius: 4, fontWeight: 600 }}
-      >
-        {buttonText}
-      </button>
-    </form>
+    <section className="contact-section" id="contacto">
+      <div className="contact-header">
+        <h1>Contáctanos</h1>
+        <p className="contact-lead">
+          ¿Tienes dudas o comentarios? Completa el formulario y nuestro equipo te responderá lo antes posible.
+        </p>
+      </div>
+      <div className="contact-grid">
+        <div className="contact-img-block">
+          <img
+            src={import.meta.env.BASE_URL + 'img/services/servicio_4_4.jpg'}
+            alt="Oficina Proyeckta Consultores"
+            className="contact-img"
+            loading="lazy"
+            width={600}
+            height={400}
+          />
+        </div>
+        <form className={`contact-form ${className}`} style={style} onSubmit={handleSubmit} noValidate>
+          <p className="contact-form-lead">
+            ¿Tienes una pregunta o comentario? Llena el formulario y te contactaremos pronto.
+          </p>
+          <div className="contact-form-row">
+            <input
+              type="text"
+              name="name"
+              placeholder="Nombre completo*"
+              value={form.name}
+              onChange={handleChange}
+              autoComplete="name"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Correo electrónico*"
+              value={form.email}
+              onChange={handleChange}
+              autoComplete="email"
+            />
+          </div>
+          {errors.name && <span className="error">{errors.name}</span>}
+          {errors.email && <span className="error">{errors.email}</span>}
+          <textarea
+            name="message"
+            placeholder="Tu mensaje*"
+            value={form.message}
+            onChange={handleChange}
+            className="contact-form-message"
+          />
+          {errors.message && <span className="error">{errors.message}</span>}
+          <button
+            type="submit"
+            className="contact-btn"
+            style={{ background: buttonColor }}
+          >
+            {buttonText}
+          </button>
+        </form>
+      </div>
+    </section>
   );
 };
 

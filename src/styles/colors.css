@@ -5,8 +5,8 @@
   --color-blanco: #FFFFFF;        /* Fondo neutro / texto claro */
 
   /* Colores de acento */
-  --color-naranja: #F37C20;       /* Acento en iconografía y CTAs */
-
+  --color-wine: #a41142;       /* Acento en iconografía y CTAs */
+  --color-mostaza: #ebae15;
   /* Tonos complementarios */
   --color-azul-oscuro-1: #06344E;
   --color-azul-oscuro-2: #002848;

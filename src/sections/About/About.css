@@ -1,60 +1,202 @@
 .about {
-  padding: 2rem 1rem;
+  padding: 2.5rem 1rem;
   background: #f8f9fa;
+  /* text-align: center; */
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+}
+
+.about__container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.about__content {
+  width: 100%;
+  /* max-width: 700px; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.about__title {
+  font-size: 2.5rem;
   text-align: center;
-}
-
-.about h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #222;
+  color: var(--color-azul-marino, #09304F);
   font-weight: 700;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.01em;
 }
 
-.about p {
+.about__lead {
+  font-size: 1.08rem;
+  color: #555;
+  margin: 0 auto;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.about__text {
+  font-size: 1.08rem;
+  color: #555;
+  margin: 0 auto;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.about__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  margin: 1.5rem 0 0 0;
+}
+
+.about__block {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(9,48,79,0.08);
+  padding: 1.2rem 1rem;
+  text-align: left;
   max-width: 600px;
   margin: 0 auto;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #555;
 }
 
-/* Tablet styles */
+.about__subtitle {
+  font-size: 1.15rem;
+  color: var(--color-azul-marino, #09304F);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.about__values {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  align-items: flex-start;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about__values li {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.about__cta {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0 0 0;
+  align-items: center;
+}
+
+.btn {
+  background: var(--color-wine, #b71c1c);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.85rem 2.2rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(9,48,79,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  display: inline-block;
+}
+.btn--primary {
+  background: var(--color-wine, #b71c1c);
+}
+.btn--primary:hover, .btn--primary:focus {
+  background: #df231d;
+  box-shadow: 0 4px 16px rgba(9,48,79,0.12);
+}
+.btn--outline {
+  background: #fff;
+  color: var(--color-wine, #b71c1c);
+  border: 2px solid var(--color-wine, #b71c1c);
+}
+.btn--outline:hover, .btn--outline:focus {
+  background: #f8eaea;
+  color: #a31515;
+}
+
+.about__media {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  background: #fff;
+}
+.about__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 @media (min-width: 768px) {
   .about {
-    padding: 3rem 2rem;
+    padding: 3.5rem 2rem;
   }
-  
-  .about h2 {
+  .about__title {
     font-size: 2.2rem;
-    margin-bottom: 1.5rem;
   }
-  
-  .about p {
-    font-size: 1.1rem;
+  .about__lead, .about__text {
+    font-size: 1.12rem;
+    max-width: 700px;
+  }
+  .about__block {
+    padding: 1.7rem 2rem;
+  }
+  .about__media {
+    max-width: 900px;
   }
 }
 
-/* Desktop styles */
 @media (min-width: 1024px) {
   .about {
     padding: 4rem 3rem;
   }
-  
-  .about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+  .about__container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3.5rem;
   }
   
-  .about p {
-    font-size: 1.2rem;
-    max-width: 700px;
+  .about__media {
+    max-width: 540px;
+    margin: 0;
+  }
+  .about__values {
+    align-items: flex-start;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
-/* Large Desktop styles */
 @media (min-width: 1200px) {
-  .about p {
+  .about__lead, .about__text {
     max-width: 800px;
+  }
+  .about__media {
+    max-width: 600px;
   }
 } 
