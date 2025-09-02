@@ -48,7 +48,7 @@ const Header: React.FC = () => {
               style={{ maxHeight: 50 }}
             />
           </button>
-          <span className="brand-name">Proteckta Consultores S.C.</span>
+          <span className="brand-name">Proyeckta Consultores S.C.</span>
         </div>
         <button
           className={`menu-toggle${menuOpen ? ' open' : ''}`}
