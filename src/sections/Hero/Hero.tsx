@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { PopupModal, useCalendlyEventListener } from "react-calendly";
 import './Hero.css';
 
 const heroImageNames = [
@@ -18,6 +19,8 @@ const Hero: React.FC = () => {
   const [showFadeIn, setShowFadeIn] = useState(false);
   const timeoutRef = useRef<any>(null);
   const fadeTimeoutRef = useRef<any>(null);
+  const [open, setOpen] = useState(false);
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   useEffect(() => {
     timeoutRef.current = setTimeout(() => {
@@ -42,10 +45,19 @@ const Hero: React.FC = () => {
   const bgImage = getImageUrl(heroImageNames[current]);
   const prevImage = prev !== null && isFading ? getImageUrl(heroImageNames[prev]) : null;
 
+  // Escucha cuando se agenda un evento
+  useCalendlyEventListener({
+    onEventScheduled: (e) => {
+      console.log("Evento agendado:", e.data.payload);
+      setOpen(false); // cierra el modal automáticamente
+      setShowConfirmation(true);
+      setTimeout(() => setShowConfirmation(false), 3000);
+    },
+  });
+
   return (
-    <section className="hero-section">
+    <section className="hero-section" id="inicio">
       <div className="hero-bg">
-        {/* Imagen anterior (fade out) */}
         {prevImage && (
           <img
             src={prevImage}
@@ -56,7 +68,6 @@ const Hero: React.FC = () => {
             style={{ zIndex: 1 }}
           />
         )}
-        {/* Imagen actual (fade in solo si showFadeIn) */}
         <img
           src={bgImage}
           alt="Consultoría en Seguridad, Higiene, Protección Civil y Gestión Ambiental"
@@ -78,7 +89,25 @@ const Hero: React.FC = () => {
             Generamos confianza a través de cumplimiento normativo, capacitación con validez oficial y atención inmediata.
           </p>
           <div className="hero-buttons">
-            <a href="#contact" className="cta-btn">Agenda una Cotización</a>
+            {showConfirmation ? (
+              <div className="hero-confirmation-anim" role="status" aria-live="polite">
+                <svg viewBox="0 0 52 52" className="checkmark" aria-hidden="true">
+                  <circle className="checkmark-circle" cx="26" cy="26" r="25" fill="none" />
+                  <path className="checkmark-check" fill="none" d="M14 27l7 7 16-16" />
+                </svg>
+                <div className="hero-confirmation-message">¡Evento agendado con éxito!</div>
+              </div>
+            ) : (
+              <button className="cta-btn" onClick={() => setOpen(true)}>
+                ¡Agenda una Cotización!
+              </button>
+            )}
+            <PopupModal
+              url="https://calendly.com/julsperez"
+              rootElement={document.getElementById("inicio") as HTMLElement}
+              open={open}
+              onModalClose={() => setOpen(false)}
+            />
           </div>
         </div>
       </div>

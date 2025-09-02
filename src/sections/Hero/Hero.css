@@ -167,6 +167,57 @@
   box-shadow: 0 4px 16px rgba(9,48,79,0.12);
 }
 
+.hero-confirmation-anim {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(37, 211, 101);
+  border-radius: 12px;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  min-width: 220px;
+  min-height: 120px;
+  box-shadow: 0 2px 12px rgba(37,211,102,0.08);
+  margin-bottom: 0.5rem;
+  outline: none;
+}
+.hero-confirmation-anim .checkmark {
+  width: 56px;
+  height: 56px;
+  display: block;
+}
+.hero-confirmation-anim .checkmark-circle {
+  stroke: #25D366;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+  fill: none;
+  animation: checkmark-circle 0.6s ease-in;
+}
+@keyframes checkmark-circle {
+  0% { stroke-dasharray: 0, 160; }
+  100% { stroke-dasharray: 160, 160; }
+}
+.hero-confirmation-anim .checkmark-check {
+  stroke: #222;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 30;
+  stroke-dashoffset: 30;
+  animation: checkmark-check 0.7s 0.2s cubic-bezier(0.65,0,0.45,1) forwards;
+}
+@keyframes checkmark-check {
+  to { stroke-dashoffset: 0; }
+}
+.hero-confirmation-message {
+  margin-top: 1.2rem;
+  font-size: 1.15rem;
+  color: #222;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
 @media (min-width: 1024px) {
   .hero-section {
     display: flex;
@@ -176,31 +227,34 @@
     height: 100vh;
   }
   .hero-content {
-    width: 50%;
+    width: 80%;
     min-height: 100vh;
     align-items: flex-start;
     justify-content: center;
     display: flex;
   }
   .hero-content-inner {
-    max-width: 540px;
-    margin-left: 0;
-    margin-right: auto;
     text-align: left;
     align-items: flex-start;
     padding: 3rem 2rem 3rem 3.5rem;
     background: none;
+    margin-top: 3rem;
+    width: 100%;
+    box-sizing: border-box;
   }
   .hero-content-inner h1 {
     font-size: 2.6rem;
+    text-align: left;
   }
   .hero-content-inner p {
     font-size: 1.18rem;
+    text-align: left;
   }
   .hero-buttons {
     flex-direction: row;
     gap: 1.5rem;
     width: auto;
     align-items: flex-start;
+    justify-content: flex-start;
   }
 } 

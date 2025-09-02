@@ -1,13 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './ServiceLayout.css';
 import services from '../../data/services'; // ← ahora .ts
+import { PopupModal, useCalendlyEventListener } from 'react-calendly';
 
 const B = import.meta.env.BASE_URL;
 
 const ServiceLayout: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const svc = services.find((s) => s.id === id);
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     if (svc) {
@@ -26,10 +29,16 @@ const ServiceLayout: React.FC = () => {
     );
   }
 
-  const waHref = `https://wa.me/525512345678?text=${encodeURIComponent(
-    `Hola, quiero una cotización de ${svc.title}`
-  )}`;
-
+  // Escucha cuando se agenda un evento
+  useCalendlyEventListener({
+    onEventScheduled: (e) => {
+      console.log("Evento agendado:", e.data.payload);
+      setOpen(false); // cierra el modal automáticamente
+      setShowConfirmation(true);
+      setTimeout(() => setShowConfirmation(false), 3000);
+    },
+  });
+  
   return (
     <div>
       <header className="service-hero">
@@ -39,7 +48,6 @@ const ServiceLayout: React.FC = () => {
       <div className="service-layout">
         <div className="service-content">
           <section className="service-info">
-            {/* Render de HTML seguro (el contenido viene de un archivo estático controlado por ti) */}
             <div
               className="service-description"
               dangerouslySetInnerHTML={{ __html: svc.description }}
@@ -68,13 +76,29 @@ const ServiceLayout: React.FC = () => {
         </div>
       </div>
 
-      <footer className="service-cta-block">
+      <footer className="service-cta-block" id="footer-service-layout">
         <p>¿Listo para llevar tu empresa al siguiente nivel?</p>
-        <div className="service-cta-btns">
-          <a href={waHref} target="_blank" rel="noopener noreferrer" className="btn btn--primary">
-            ¡Agendar llamada!
-          </a>
-        </div>
+        <div className="hero-buttons service-cta-btn">
+            {showConfirmation ? (
+              <div className="hero-confirmation-anim service-cta-btn" role="status" aria-live="polite">
+                <svg viewBox="0 0 52 52" className="checkmark" aria-hidden="true">
+                  <circle className="checkmark-circle" cx="26" cy="26" r="25" fill="none" />
+                  <path className="checkmark-check" fill="none" d="M14 27l7 7 16-16" />
+                </svg>
+                <div className="hero-confirmation-message">¡Evento agendado con éxito!</div>
+              </div>
+            ) : (
+              <button className="cta-btn service-cta-btn" onClick={() => setOpen(true)}>
+                ¡Agenda una Cotización!
+              </button>
+            )}
+            <PopupModal
+              url="https://calendly.com/julsperez"
+              rootElement={document.getElementById("footer-service-layout") as HTMLElement}
+              open={open}
+              onModalClose={() => setOpen(false)}
+            />
+          </div>
       </footer>
     </div>
   );

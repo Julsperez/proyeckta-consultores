@@ -1,5 +1,4 @@
 main {
-  /* padding-top: 60px; */
   padding-bottom: 50px;
   min-height: 100vh;
   background: #f8f9fa;
@@ -8,7 +7,6 @@ main {
 /* Tablet styles */
 @media (min-width: 768px) {
   main {
-    /* padding-top: 70px; */
     padding-bottom: 60px;
   }
 }
@@ -16,7 +14,6 @@ main {
 /* Desktop styles */
 @media (min-width: 1024px) {
   main {
-    /* padding-top: 80px; */
     padding-bottom: 70px;
   }
 } 

@@ -6,7 +6,6 @@
   background: #25d366;
   border-radius: 32px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-  /* padding: 0 20px 0 10px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +16,6 @@
   gap: 10px;
 }
 .floating-whatsapp-btn:hover, .floating-whatsapp-btn:focus {
-  /* box-shadow: 0 8px 32px rgba(0,0,0,0.22); */
   transform: scale(1.05);
 }
 .floating-whatsapp-btn a {
@@ -37,11 +35,6 @@
     white-space: nowrap;
     letter-spacing: 0.01em;
     margin-left: 8px;
-    /* position: absolute;
-    right: 0px;
-    background: black;
-    padding: 0.3rem;
-    border-radius: 10px; */
 }
 @media (max-width: 600px) {
   .floating-whatsapp-btn {

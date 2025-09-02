@@ -133,12 +133,6 @@ const ContactForm: React.FC<ContactFormProps> = ({
               aria-live="polite"
             >
               <div className="retry-anim">
-                {/* <svg viewBox="0 0 48 48" className="retry-icon" aria-hidden="true">
-                  <g>
-                    <path d="M24 6a18 18 0 1 1-12.73 5.27" fill="none" stroke="#d32f2f" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                    <polyline points="8 8 12 8 12 12" fill="none" stroke="#d32f2f" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                  </g>
-                </svg> */}
                 <svg viewBox="0 0 40 40" className="error-cross" aria-hidden="true">
                   <circle cx="20" cy="20" r="18" fill="none" />
                   <path className="error-cross-line error-cross-line1" d="M14 14 L26 26" />
