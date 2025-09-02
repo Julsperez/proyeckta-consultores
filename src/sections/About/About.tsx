@@ -1,11 +1,35 @@
 import React from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './About.css';
 
-const About: React.FC = () => (
-  <section className="about" id="nosotros">
-    <div className="about__container">
+const About: React.FC = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleSectionNav = (hash: string) => {
+    if (location.pathname !== "/") {
+      navigate(`/${hash}`);
+      setTimeout(() => {
+        const el = document.getElementById(hash.replace('#', ''));
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const el = document.getElementById(hash.replace('#', ''));
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        window.location.hash = hash;
+      }
+    }
+  };
+
+  return (
+    <section className="about" id="nosotros">
+      <div className="about__container">
         <div className="about__content">
-        <h2 className="about__title">Sobre Nosotros</h2>
+          <h2 className="about__title">Sobre Nosotros</h2>
 
           <p className="about__lead">
             En <strong>Proyeckta Consultores S.C.</strong> somos especialistas en
@@ -44,11 +68,14 @@ const About: React.FC = () => (
 
 
           <div className="about__cta">
-            <a href="#services" className="btn btn--primary">Conoce nuestros servicios</a>
+            <button type="button" className="btn btn--primary" onClick={() => handleSectionNav('#servicios')}>
+              Conoce nuestros servicios
+            </button>
           </div>
         </div>
       </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default About; 
