@@ -42,13 +42,13 @@ const Header: React.FC = () => {
           >
             <img
               src={`${baseUrl}img/logo-proyeckta_2.jpeg`}
-              alt="Logo Proyeckta Consultores"
+              alt="Logo Proteckta Consultores"
               className="header-logo"
               height={50}
               style={{ maxHeight: 50 }}
             />
           </button>
-          <span className="brand-name">Proyeckta Consultores S.C.</span>
+          <span className="brand-name">Proteckta Consultores S.C.</span>
         </div>
         <button
           className={`menu-toggle${menuOpen ? ' open' : ''}`}

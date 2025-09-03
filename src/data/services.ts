@@ -22,7 +22,7 @@ const services: Service[] = [
         <li><strong>Condiciones de seguridad e higiene</strong>, enfocadas en prevenir accidentes y enfermedades de trabajo.</li>
       </ol>
       <p>
-        En <strong>Proyeckta Consultores</strong> ofrecemos apoyo especializado principalmente en el
+        En <strong>Proteckta Consultores</strong> ofrecemos apoyo especializado principalmente en el
         segundo y tercer rubro, asegurando que tu organización cumpla con la normatividad vigente, minimice riesgos y promueva un ambiente laboral seguro y eficiente.
       </p>
     `,
@@ -39,7 +39,7 @@ const services: Service[] = [
     title: "Promoción y capacitacion en temas de auditorias de cliente nacionales e internacionales",
     description: `
       <p>
-        En <strong>Proyeckta Consultores</strong> aseguramos que el cumplimiento de tu centro de trabajo sea integral. 
+        En <strong>Proteckta Consultores</strong> aseguramos que el cumplimiento de tu centro de trabajo sea integral. 
         Brindamos recomendaciones específicas que garantizan hasta un <strong>100% de conformidad</strong> con la normatividad aplicable, 
         elaboramos la documentación necesaria para auditorías de clientes nacionales e internacionales y te acompañamos en todo el proceso de verificación.
       </p>
@@ -72,7 +72,7 @@ const services: Service[] = [
     title: "Gestión Ambiental",
     description: `
       <p>
-        En <strong>Proyeckta Consultores</strong> te apoyamos en la gestión de trámites de 
+        En <strong>Proteckta Consultores</strong> te apoyamos en la gestión de trámites de 
         <strong>cumplimiento ambiental</strong> en sus diferentes niveles de competencia: municipal, estatal y federal. 
         Nos encargamos de que tu empresa cuente con la documentación, permisos y registros necesarios para operar en conformidad con la normatividad vigente.
       </p>
@@ -101,7 +101,7 @@ const services: Service[] = [
     title: "Programa de Capacitación de Brigadas de Emergencia",
     description: `
       <p>
-        En <strong>Proyeckta Consultores</strong> te apoyamos en el cumplimiento de las 
+        En <strong>Proteckta Consultores</strong> te apoyamos en el cumplimiento de las 
         <strong>recomendaciones establecidas por la autoridad de Protección Civil</strong> y de la 
         <a href="https://dof.gob.mx/normasOficiales/4228/stps/stps.htm" target="_blank" rel="noopener noreferrer">
           NOM-002-STPS-2010

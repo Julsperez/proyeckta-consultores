@@ -32,7 +32,7 @@ const About: React.FC = () => {
           <h2 className="about__title">Sobre Nosotros</h2>
 
           <p className="about__lead">
-            En <strong>Proyeckta Consultores S.C.</strong> somos especialistas en
+            En <strong>Proteckta Consultores S.C.</strong> somos especialistas en
             <strong> Seguridad e Higiene Ocupacional</strong>, <strong>Protección Civil</strong>,
             <strong> Gestión Ambiental</strong> y <strong>Certificaciones Internacionales</strong>.
             Nuestra misión es ayudarte a cumplir con la normatividad vigente, prevenir riesgos y

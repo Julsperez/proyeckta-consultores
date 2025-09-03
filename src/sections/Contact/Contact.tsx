@@ -59,9 +59,9 @@ const ContactForm: React.FC<ContactFormProps> = ({
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const serviceId = 'service_ms4dw5r';
-    const templateId = 'template_kx8sh07';
-    const publicKey = '8z9B_64gfAikJbp_o';
+    const serviceId = 'service_h52mfaq';
+    const templateId = 'template_ywn2fol';
+    const publicKey = '-39FRs6Hin65QieW2';
     
     emailjs.sendForm(serviceId, templateId, formRef.current as HTMLFormElement, {
       publicKey: publicKey,
@@ -99,7 +99,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
         <div className="contact-img-block">
           <img
             src={import.meta.env.BASE_URL + 'img/services/servicio_4_4.jpg'}
-            alt="Oficina Proyeckta Consultores"
+            alt="Oficina Proteckta Consultores"
             className="contact-img"
             loading="lazy"
             width={600}

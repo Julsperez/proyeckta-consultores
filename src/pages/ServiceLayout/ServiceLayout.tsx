@@ -14,7 +14,7 @@ const ServiceLayout: React.FC = () => {
 
   useEffect(() => {
     if (svc) {
-      document.title = `${svc.title} — Proyeckta Consultores`;
+      document.title = `${svc.title} — Proteckta Consultores`;
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }, [id, svc]);
@@ -93,7 +93,7 @@ const ServiceLayout: React.FC = () => {
               </button>
             )}
             <PopupModal
-              url="https://calendly.com/julsperez"
+              url="https://calendly.com/alejan_carballo"
               rootElement={document.getElementById("footer-service-layout") as HTMLElement}
               open={open}
               onModalClose={() => setOpen(false)}
