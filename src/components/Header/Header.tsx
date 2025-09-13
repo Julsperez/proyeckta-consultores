@@ -41,7 +41,7 @@ const Header: React.FC = () => {
             onClick={() => handleSectionNav('#inicio')}
           >
             <img
-              src={`${baseUrl}img/thumbnail_logo_bg_orange.png`}
+              src={`${baseUrl}img/`}
               alt="Logo Proteckta "
               className="header-logo"
               height={50}
@@ -82,4 +82,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header; 
+export default Header;

@@ -31,7 +31,7 @@ const About: React.FC = () => {
         <div className="about__content">
           <h2 className="about__title">Sobre Nosotros</h2>
 
-          <p className="about__lead">
+          {/* <p className="about__lead">
             En <strong>Proteckta</strong> somos especialistas en
             <strong> Seguridad e Higiene Ocupacional</strong>, <strong>Protección Civil</strong>,
             <strong> Gestión Ambiental</strong> y <strong>Certificaciones Internacionales</strong>.
@@ -64,7 +64,7 @@ const About: React.FC = () => {
                 internacionales.
               </p>
             </div>
-          </div>
+          </div> */}
 
 
           <div className="about__cta" style={{ display: 'flex', flexDirection: 'row', gap: '1rem', justifyContent: 'center', alignItems: 'center' }}>

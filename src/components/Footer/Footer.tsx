@@ -3,10 +3,10 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import './Footer.css';
 
 const servicios = [
-  { label: 'Seguridad e Higiene Ocupacional', to: '/servicios/seguridad-higiene' },
-  { label: 'Promoción y capacitacion en temas de auditorias', to: '/servicios/proteccion-civil' },
-  { label: 'Gestión Ambiental', to: '/servicios/gestion-ambiental' },
-  { label: 'Programa de Capacitación de Brigadas de Emergencia', to: '/servicios/certificaciones' },
+  { label: 'Servicio 1', to: '/servicios/seguridad-higiene' },
+  { label: 'Servicio 1', to: '/servicios/proteccion-civil' },
+  { label: 'Servicio 1', to: '/servicios/gestion-ambiental' },
+  { label: 'Servicio 1', to: '/servicios/certificaciones' },
 ];
 
 const navegacion = [

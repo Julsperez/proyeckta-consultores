@@ -5,27 +5,27 @@ import './Services.css';
 const services = [
   {
     slug: 'seguridad-higiene',
-    title: 'Seguridad e Higiene Ocupacional',
-    desc: 'Ofrecemos apoyo especializado asegurando que tu organización cumpla con la normatividad vigente, minimice riesgos y promueva un ambiente laboral seguro y eficiente.',
-    img: 'img/servicios/servicio_1_portada.jpg',
+    title: '',
+    desc: '',
+    img: '',
   },
   {
     slug: 'proteccion-civil',
-    title: 'Promoción y capacitacion en temas de auditorias',
-    desc: 'Brindamos recomendaciones específicas que garantizan hasta un 100% de conformidad con la normatividad aplicable.',
-    img: 'img/servicios/servicio_2_portada.jpg',
+    title: '',
+    desc: '',
+    img: '',
   },
   {
     slug: 'gestion-ambiental',
-    title: 'Gestión Ambiental',
-    desc: 'Nos encargamos de que tu empresa cuente con la documentación, permisos y registros necesarios para operar en conformidad con la normatividad vigente.',
-    img: 'img/servicios/servicio_3_portada.jpg',
+    title: '',
+    desc: '',
+    img: '',
   },
   {
     slug: 'certificaciones',
-    title: 'Programa de Capacitación de Brigadas de Emergencia',
-    desc: 'Garantizamos que tu organización esté preparada para responder de manera efectiva a situaciones de riesgo y cumpla con la normatividad vigente.',
-    img: 'img/servicios/servicio_4_portada.jpg',
+    title: '',
+    desc: '',
+    img: '',
   },
 ];
 

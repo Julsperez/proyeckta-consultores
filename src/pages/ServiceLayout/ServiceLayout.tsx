@@ -40,11 +40,11 @@ const ServiceLayout: React.FC = () => {
   };
   const prevSlide = (e?: React.MouseEvent) => {
     if (e) e.preventDefault();
-    setCurrentSlide((prev) => (prev - 1 + svc.carousel.length) % svc.carousel.length);
+    // setCurrentSlide((prev) => (prev - 1 + svc.carousel.length) % svc.carousel.length);
   };
   const nextSlide = (e?: React.MouseEvent) => {
     if (e) e.preventDefault();
-    setCurrentSlide((prev) => (prev + 1) % svc.carousel.length);
+    // setCurrentSlide((prev) => (prev + 1) % svc.carousel.length);
   };
 
   if (!svc) {
