@@ -13,6 +13,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
     <Header />
     <div className="header-spacer"></div>
     <div>{children}</div>
+    
+    <FloatingWhatsAppButton color='#2591d3' message='Normativas' url='https://google.com.mx' image='img/file-60.png' marginBottom='5rem'/>
     <FloatingWhatsAppButton />
     <Footer />
   </>

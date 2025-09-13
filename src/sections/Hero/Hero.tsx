@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
         )}
         <img
           src={bgImage}
-          alt="Consultoría en Seguridad, Higiene, Protección Civil y Gestión Ambiental"
+          alt="Consultoría en Seguridad e higiene, Protección Civil y Gestión Ambiental"
           className={`hero-img hero-img-layer${showFadeIn ? ' fade-in' : ''}`}
           loading="eager"
           aria-hidden="true"
@@ -82,13 +82,13 @@ const Hero: React.FC = () => {
       <div className="hero-content">
         <div className="hero-content-inner">
           <h1>
-            Consultoría en Seguridad, Higiene,<br />
+            Consultoría en Seguridad e Higiene Ocupacional,<br />
             Protección Civil y Gestión Ambiental
           </h1>
           <p>
             Generamos confianza a través de cumplimiento normativo, capacitación con validez oficial y atención inmediata.
           </p>
-          <div className="hero-buttons">
+          <div className="hero-buttons hero-buttons--row">
             {showConfirmation ? (
               <div className="hero-confirmation-anim" role="status" aria-live="polite">
                 <svg viewBox="0 0 52 52" className="checkmark" aria-hidden="true">
@@ -102,6 +102,9 @@ const Hero: React.FC = () => {
                 ¡Agenda una Cotización!
               </button>
             )}
+            <a className="normativa-btn normativa-btn--orange" href="https://google.com.mx">
+              Consulta nuestras normativas
+            </a>
             <PopupModal
               url="https://calendly.com/alejan_carballo"
               rootElement={document.getElementById("inicio") as HTMLElement}

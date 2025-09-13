@@ -99,7 +99,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
         <div className="contact-img-block">
           <img
             src={import.meta.env.BASE_URL + 'img/services/servicio_4_4.jpg'}
-            alt="Oficina Proteckta Consultores"
+            alt="Oficina Proteckta"
             className="contact-img"
             loading="lazy"
             width={600}

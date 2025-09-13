@@ -41,14 +41,14 @@ const Header: React.FC = () => {
             onClick={() => handleSectionNav('#inicio')}
           >
             <img
-              src={`${baseUrl}img/logo-proyeckta_2.jpeg`}
-              alt="Logo Proteckta Consultores"
+              src={`${baseUrl}img/thumbnail_logo_bg_orange.png`}
+              alt="Logo Proteckta "
               className="header-logo"
               height={50}
               style={{ maxHeight: 50 }}
             />
           </button>
-          <span className="brand-name">Proteckta Consultores S.C.</span>
+          <span className="brand-name">Proteckta </span>
         </div>
         <button
           className={`menu-toggle${menuOpen ? ' open' : ''}`}

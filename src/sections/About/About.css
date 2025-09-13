@@ -57,13 +57,14 @@
 }
 
 .about__block {
-  background: #fff;
+  background: #e2e2e2;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(9,48,79,0.08);
   padding: 1.2rem 1rem;
   text-align: left;
   max-width: 600px;
   margin: 0 auto;
+  border: 1px solid #cfcfcf;
 }
 
 .about__subtitle {

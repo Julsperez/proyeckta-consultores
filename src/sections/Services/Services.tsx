@@ -7,25 +7,25 @@ const services = [
     slug: 'seguridad-higiene',
     title: 'Seguridad e Higiene Ocupacional',
     desc: 'Ofrecemos apoyo especializado asegurando que tu organización cumpla con la normatividad vigente, minimice riesgos y promueva un ambiente laboral seguro y eficiente.',
-    img: 'img/services/servicio_1_2.jpg',
+    img: 'img/servicios/servicio_1_portada.jpg',
   },
   {
     slug: 'proteccion-civil',
     title: 'Promoción y capacitacion en temas de auditorias',
     desc: 'Brindamos recomendaciones específicas que garantizan hasta un 100% de conformidad con la normatividad aplicable.',
-    img: 'img/services/servicio_4_2.jpg',
+    img: 'img/servicios/servicio_2_portada.jpg',
   },
   {
     slug: 'gestion-ambiental',
     title: 'Gestión Ambiental',
     desc: 'Nos encargamos de que tu empresa cuente con la documentación, permisos y registros necesarios para operar en conformidad con la normatividad vigente.',
-    img: 'img/services/servicio_3_1.jpg',
+    img: 'img/servicios/servicio_3_portada.jpg',
   },
   {
     slug: 'certificaciones',
     title: 'Programa de Capacitación de Brigadas de Emergencia',
     desc: 'Garantizamos que tu organización esté preparada para responder de manera efectiva a situaciones de riesgo y cumpla con la normatividad vigente.',
-    img: 'img/services/servicio_2_2.jpg',
+    img: 'img/servicios/servicio_4_portada.jpg',
   },
 ];
 
@@ -35,7 +35,7 @@ const Services: React.FC = () => {
       <h2 className="services-title">
         Somos expertos en <span className="accent">todos nuestros servicios</span>
       </h2>
-      <p>Todos nuestros servicios forman parte de las acciones a seguir para certificarte ante la siguientes ISO/OSHA</p>
+      {/* <p>Todos nuestros servicios forman parte de las acciones a seguir para certificarte ante la siguientes ISO/OSHA</p> */}
       <div className="services-grid">
         {services.map((s) => (
           <div className="service-item" key={s.slug}>

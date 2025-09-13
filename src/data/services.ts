@@ -5,6 +5,7 @@ export interface Service {
   description: string;
   highlights: string[];
   image: string; // ruta en /public
+  carousel : string[];
 }
 
 const services: Service[] = [
@@ -22,8 +23,13 @@ const services: Service[] = [
         <li><strong>Condiciones de seguridad e higiene</strong>, enfocadas en prevenir accidentes y enfermedades de trabajo.</li>
       </ol>
       <p>
-        En <strong>Proteckta Consultores</strong> ofrecemos apoyo especializado principalmente en el
+        En <strong>Proteckta</strong> ofrecemos apoyo especializado principalmente en el
         segundo y tercer rubro, asegurando que tu organización cumpla con la normatividad vigente, minimice riesgos y promueva un ambiente laboral seguro y eficiente.
+      </p>
+      <p>
+        Somos expertos en <strong>normatividad STPS de seguridad</strong>, (sustancias químicas, espacios confinados, ergonomía en el trabajo, etc.). <br/><br/>
+        Realizamos estudios de <strong>higiene / ambiente laboral</strong>. (Iluminación, tierras físicas, temperaturas elevadas y abatidas, etc.) <br/><br/>
+        <strong>  Contáctanos, </strong>	cubrimos toda la normatividad de seguridad e higiene laboral. <br/>
       </p>
     `,
     highlights: [
@@ -32,14 +38,22 @@ const services: Service[] = [
       "Asesoría en procesos de inspección laboral.",
       "Asegurar entornos laborales seguros y eficientes."
     ],
-    image: "/img/services/servicio_1_2.jpg"
+    image: "/img/servicios/servicio_1_1.jpg",
+    carousel : [
+      "img/servicios/servicio_1_1.jpg",
+      "img/servicios/servicio_1_2.jpg",
+      "img/servicios/servicio_1_3.jpg",
+      "img/servicios/servicio_1_4.jpg",
+      "img/servicios/servicio_1_5.jpg",
+      "img/servicios/servicio_1_6.jpg"
+    ]
   },
   {
     id: "proteccion-civil",
-    title: "Promoción y capacitacion en temas de auditorias de cliente nacionales e internacionales",
+    title: "Promoción y capacitación en seguridad e higiene ocupacional",
     description: `
       <p>
-        En <strong>Proteckta Consultores</strong> aseguramos que el cumplimiento de tu centro de trabajo sea integral. 
+        En <strong>Proteckta</strong> aseguramos que el cumplimiento de tu centro de trabajo sea integral. 
         Brindamos recomendaciones específicas que garantizan hasta un <strong>100% de conformidad</strong> con la normatividad aplicable, 
         elaboramos la documentación necesaria para auditorías de clientes nacionales e internacionales y te acompañamos en todo el proceso de verificación.
       </p>
@@ -65,14 +79,22 @@ const services: Service[] = [
       "Capacitación con validez oficial como DC5 y emisión de constancias DC3 en materia de seguridad e higiene.",
       "Programas alineados a las NOMs de la STPS, garantizando cumplimiento y competitividad empresarial."
     ],
-    image: "/img/services/servicio_2_2.jpg"
+    image: "/img/servicios/servicio_2_1.jpg",
+    carousel : [
+      "img/servicios/servicio_2_1.jpg",
+      "img/servicios/servicio_2_2.jpg",
+      "img/servicios/servicio_2_3.jpg",
+      "img/servicios/servicio_2_4.jpg",
+      "img/servicios/servicio_2_5.jpg",
+      "img/servicios/servicio_2_6.jpg"
+    ]
   },
   {
     id: "gestion-ambiental",
-    title: "Gestión Ambiental",
+    title: "Gestión ambiental",
     description: `
       <p>
-        En <strong>Proteckta Consultores</strong> te apoyamos en la gestión de trámites de 
+        En <strong>Proteckta</strong> te apoyamos en la gestión de trámites de 
         <strong>cumplimiento ambiental</strong> en sus diferentes niveles de competencia: municipal, estatal y federal. 
         Nos encargamos de que tu empresa cuente con la documentación, permisos y registros necesarios para operar en conformidad con la normatividad vigente.
       </p>
@@ -94,21 +116,29 @@ const services: Service[] = [
       "Asesoría y tramitación de MIA’s, informes preventivos, DTU y modificaciones de impacto ambiental.",
       "Registros y planes de manejo de residuos peligrosos y de manejo especial para asegurar el cumplimiento normativo."
     ],
-    image: "/img/services/servicio_3_2.jpg"
+    image: "/img/servicios/servicio_3_1.jpg",
+    carousel : [
+      "img/servicios/servicio_3_1.jpg",
+      "img/servicios/servicio_3_2.jpg",
+      "img/servicios/servicio_3_3.jpg",
+      "img/servicios/servicio_3_4.jpg",
+      "img/servicios/servicio_3_5.jpg",
+      "img/servicios/servicio_3_6.jpg"
+    ]
   },
   {
     id: "certificaciones",
-    title: "Programa de Capacitación de Brigadas de Emergencia",
+    title: "Protección civil",
     description: `
       <p>
-        En <strong>Proteckta Consultores</strong> te apoyamos en el cumplimiento de las 
+        En <strong>Proteckta</strong> te apoyamos en el cumplimiento de las 
         <strong>recomendaciones establecidas por la autoridad de Protección Civil</strong> y de la 
         <a href="https://dof.gob.mx/normasOficiales/4228/stps/stps.htm" target="_blank" rel="noopener noreferrer">
           NOM-002-STPS-2010
         </a>, enfocada en la prevención y atención de emergencias relacionadas con incendios.  
       </p>
       <p>
-        Contamos con personal registrado ante la autoridad competente, lo que nos faculta para 
+        Contamos con personal registrado ante la autoridad competente, lo que nos da la facultad para 
         <strong>emitir dictámenes de responsabilidad civil</strong> a través de los 
         <em>Responsables Oficiales de Protección Civil (ROPC)</em>.  
       </p>
@@ -124,7 +154,15 @@ const services: Service[] = [
       "Acompañamiento integral en el seguimiento y aplicación de programas de Protección Civil.",
       "Garantía de cumplimiento normativo ante autoridades municipales, estatales y federales."
     ],
-    image: "/img/services/servicio_1_1.jpg"
+    image: "/img/servicios/servicio_4_1.jpg",
+    carousel : [
+      "img/servicios/servicio_4_1.jpg",
+      "img/servicios/servicio_4_2.jpg",
+      "img/servicios/servicio_4_3.jpg",
+      "img/servicios/servicio_4_4.jpg",
+      "img/servicios/servicio_4_5.jpg",
+      "img/servicios/servicio_4_6.jpg"
+    ]
   }
 ];
 

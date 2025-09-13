@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div className="footer-copyright">
-        © 2025. Todos los derechos reservados por Proteckta Consultores S.C.
+        © 2025. Todos los derechos reservados por Proteckta .
       </div>
     </footer>
   );

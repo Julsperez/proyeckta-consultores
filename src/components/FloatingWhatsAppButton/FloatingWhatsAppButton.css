@@ -3,7 +3,7 @@
   right: 24px;
   bottom: 30px;
   z-index: 1000;
-  background: #25d366;
+  /* background: #25d366; */
   border-radius: 32px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.18);
   display: flex;
