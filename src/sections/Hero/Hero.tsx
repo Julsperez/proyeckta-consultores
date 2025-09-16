@@ -106,7 +106,7 @@ const Hero: React.FC = () => {
               Consulta nuestras normativas
             </a>
             <PopupModal
-              url="https://calendly.com/alejan_carballo"
+              url="https://calendly.com/angel9pacheco"
               rootElement={document.getElementById("inicio") as HTMLElement}
               open={open}
               onModalClose={() => setOpen(false)}

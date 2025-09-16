@@ -59,9 +59,9 @@ const ContactForm: React.FC<ContactFormProps> = ({
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const serviceId = 'service_h52mfaq';
-    const templateId = 'template_ywn2fol';
-    const publicKey = '-39FRs6Hin65QieW2';
+    const serviceId = 'service_3ad4m6c';
+    const templateId = 'template_44d4dao';
+    const publicKey = 'ksI6KEEbBis68hX7S';
     
     emailjs.sendForm(serviceId, templateId, formRef.current as HTMLFormElement, {
       publicKey: publicKey,

@@ -10,7 +10,7 @@ interface FloatingWhatsAppButtonProps {
 }
 
 const DEFAULT_URL =
-  'https://wa.me/525580129631?text=Hola%2C%20me%20interesa%20una%20cotizaci%C3%B3n.';
+  'https://wa.me/525620191598?text=Hola%2C%20me%20interesa%20una%20cotizaci%C3%B3n.';
 const DEFAULT_IMAGE = import.meta.env.BASE_URL + 'img/WhatsApp_icon.png';
 const DEFAULT_COLOR = '#25d366';
 const DEFAULT_MESSAGE = 'Solicita una Cotización';
