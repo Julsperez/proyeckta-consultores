@@ -1,15 +1,24 @@
+@import '../../styles/colors.css';
+@import '../../styles/variables.css';
+
+/* ==========================================
+   LAYOUT BASE
+   ========================================== */
 .hero-section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  height: 100vh;
+  min-height: var(--hero-height);
+  height: var(--hero-height);
   overflow: hidden;
   display: flex;
   align-items: stretch;
   justify-content: center;
-  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  font-family: var(--font-family);
 }
 
+/* ==========================================
+   HERO BACKGROUND & IMAGES
+   ========================================== */
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -18,20 +27,22 @@
   z-index: 0;
   pointer-events: none;
 }
+
 .hero-bg picture,
 .hero-bg .hero-img {
   width: 100%;
   height: 100%;
   display: block;
 }
+
 .hero-bg .hero-img {
   object-fit: cover;
   object-position: center;
   width: 100vw;
-  height: 100vh;
+  height: var(--hero-height);
   user-select: none;
   pointer-events: none;
-  transition: opacity 0.8s cubic-bezier(.4,0,.2,1);
+  transition: opacity var(--transition-slow) var(--easing-smooth);
 }
 
 .hero-img-layer {
@@ -43,36 +54,36 @@
   z-index: 1;
 }
 
+/* ==========================================
+   HERO ANIMATIONS
+   ========================================== */
 .fade-in {
-  animation: hero-fade-in 0.8s cubic-bezier(.4,0,.2,1) both;
+  animation: hero-fade-in var(--transition-slow) var(--easing-smooth) both;
   z-index: 2;
 }
+
 .fade-out {
-  animation: hero-fade-out 0.8s cubic-bezier(.4,0,.2,1) both;
+  animation: hero-fade-out var(--transition-slow) var(--easing-smooth) both;
   z-index: 1;
 }
 
 @keyframes hero-fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes hero-fade-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
+@keyframes hero-fade-out {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ==========================================
+   HERO OVERLAY & CONTENT
+   ========================================== */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(9, 48, 79, 0.6); /* Azul marino semitransparente */
+  background: var(--hero-overlay);
   z-index: 3;
 }
 
@@ -80,7 +91,7 @@
   position: relative;
   z-index: 4;
   width: 100%;
-  min-height: 100vh;
+  min-height: var(--hero-height);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,12 +99,12 @@
 
 .hero-content-inner {
   width: 100%;
-  max-width: 600px;
+  max-width: var(--content-max-width);
   margin: 0 auto;
   margin-top: -8rem;
-  padding: 2.5rem 1.25rem 2rem 1.25rem;
+  padding: var(--spacing-3xl) var(--spacing-lg) var(--spacing-2xl) var(--spacing-lg);
   text-align: center;
-  color: #fff;
+  color: var(--text-primary);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,26 +112,29 @@
 }
 
 .hero-content-inner h1 {
-  font-size: 2rem;
+  font-size: var(--title-font-size-lg);
   font-weight: 700;
-  margin-bottom: 1.2rem;
-  line-height: 1.2;
-  color: #fff;
+  margin-bottom: var(--spacing-lg);
+  line-height: var(--line-height-tight);
+  color: var(--text-primary);
   text-shadow: 0 2px 8px rgba(9,48,79,0.18);
 }
 
 .hero-content-inner p {
-  font-size: 1.08rem;
+  font-size: var(--subtitle-font-size);
   font-weight: 400;
-  margin-bottom: 2rem;
-  color: #fff;
+  margin-bottom: var(--spacing-2xl);
+  color: var(--text-primary);
   text-shadow: 0 1px 4px rgba(9,48,79,0.12);
 }
 
+/* ==========================================
+   HERO BUTTONS
+   ========================================== */
 .hero-buttons {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--spacing-md);
   width: 100%;
   align-items: center;
 }
@@ -130,28 +144,29 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: var(--spacing-md);
 }
 
 .cta-btn {
   background: var(--color-mostaza);
 }
+
 .normativa-btn {
   background: var(--color-wine);
 }
 
 .cta-btn,
 .normativa-btn {
-  color: #fff;
+  color: var(--text-primary);
   border: none;
-  border-radius: 6px;
+  border-radius: var(--border-radius-sm);
   padding: 0.85rem 2.2rem;
-  font-size: 1.08rem;
+  font-size: var(--subtitle-font-size);
   font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 2px 8px rgba(9,48,79,0.08);
-  transition: background 0.2s, box-shadow 0.2s;
-  letter-spacing: 0.02em;
+  box-shadow: var(--shadow-hero);
+  transition: background var(--transition-fast), box-shadow var(--transition-fast);
+  letter-spacing: var(--letter-spacing-btn);
   cursor: pointer;
   outline: none;
   text-align: center;
@@ -162,148 +177,180 @@
   min-width: 220px;
   white-space: nowrap;
 }
-.cta-btn:hover, .cta-btn:focus {
+
+.cta-btn:hover,
+.cta-btn:focus {
   background: var(--color-wine);
 }
-.normativa-btn:hover, .normativa-btn:focus {
+
+.normativa-btn:hover,
+.normativa-btn:focus {
   background: var(--color-mostaza);
 }
 
-.cta-btn:hover, .cta-btn:focus,
-.normativa-btn:hover, .normativa-btn:focus {
-  color: #fff;
-  box-shadow: 0 4px 16px rgba(9,48,79,0.12);
+.cta-btn:hover,
+.cta-btn:focus,
+.normativa-btn:hover,
+.normativa-btn:focus {
+  color: var(--text-primary);
+  box-shadow: var(--shadow-hero-md);
   text-decoration: none;
 }
 
+/* ==========================================
+   WHATSAPP BUTTON
+   ========================================== */
 .whatsapp-btn {
-  background: #09304F;
-  color: #fff;
+  background: var(--whatsapp-bg);
+  color: var(--text-primary);
   border: none;
-  border-radius: 4px;
+  border-radius: var(--border-radius-xs);
   padding: 0.85rem 2.2rem;
-  font-size: 1.08rem;
+  font-size: var(--subtitle-font-size);
   font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 2px 8px rgba(9,48,79,0.08);
-  transition: background 0.2s, box-shadow 0.2s;
-  letter-spacing: 0.02em;
+  box-shadow: var(--shadow-hero);
+  transition: background var(--transition-fast), box-shadow var(--transition-fast);
+  letter-spacing: var(--letter-spacing-btn);
   cursor: pointer;
   outline: none;
   text-align: center;
 }
-.whatsapp-btn:hover, .whatsapp-btn:focus {
-  background: #002A47;
-  box-shadow: 0 4px 16px rgba(9,48,79,0.12);
+
+.whatsapp-btn:hover,
+.whatsapp-btn:focus {
+  background: var(--whatsapp-hover);
+  box-shadow: var(--shadow-hero-md);
 }
 
+/* ==========================================
+   CONFIRMATION ANIMATION
+   ========================================== */
 .hero-confirmation-anim {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgb(37, 211, 101);
-  border-radius: 12px;
-  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  background: var(--confirmation-bg);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-2xl) var(--spacing-xl) var(--spacing-xl) var(--spacing-xl);
   min-width: 220px;
   min-height: 120px;
-  box-shadow: 0 2px 12px rgba(37,211,102,0.08);
-  margin-bottom: 0.5rem;
+  box-shadow: var(--shadow-confirmation);
+  margin-bottom: var(--spacing-xs);
   outline: none;
 }
+
 .hero-confirmation-anim .checkmark {
   width: 56px;
   height: 56px;
   display: block;
 }
+
 .hero-confirmation-anim .checkmark-circle {
-  stroke: #25D366;
+  stroke: var(--checkmark-stroke);
   stroke-width: 4;
   stroke-miterlimit: 10;
   fill: none;
   animation: checkmark-circle 0.6s ease-in;
 }
+
 @keyframes checkmark-circle {
   0% { stroke-dasharray: 0, 160; }
   100% { stroke-dasharray: 160, 160; }
 }
+
 .hero-confirmation-anim .checkmark-check {
-  stroke: #222;
+  stroke: var(--text-secondary);
   stroke-width: 4;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-dasharray: 30;
   stroke-dashoffset: 30;
-  animation: checkmark-check 0.7s 0.2s cubic-bezier(0.65,0,0.45,1) forwards;
+  animation: checkmark-check 0.7s 0.2s var(--easing-bounce) forwards;
 }
+
 @keyframes checkmark-check {
   to { stroke-dashoffset: 0; }
 }
+
 .hero-confirmation-message {
-  margin-top: 1.2rem;
-  font-size: 1.15rem;
-  color: #222;
+  margin-top: var(--spacing-lg);
+  font-size: var(--text-font-size-lg);
+  color: var(--text-secondary);
   text-align: center;
   font-weight: 600;
-  letter-spacing: 0.01em;
+  letter-spacing: var(--letter-spacing);
 }
 
+/* ==========================================
+   RESPONSIVE DESIGN - MOBILE FIRST
+   ========================================== */
+
+/* Small Mobile (599px and below) */
+@media (max-width: 599px) {
+  .hero-buttons.hero-buttons--row {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Desktop (1024px+) */
 @media (min-width: 1024px) {
   .hero-section {
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    min-height: 100vh;
-    height: 100vh;
+    min-height: var(--hero-height);
+    height: var(--hero-height);
   }
+
   .hero-content {
-    width: 80%;
-    min-height: 100vh;
+    width: var(--desktop-content-width);
+    min-height: var(--hero-height);
     align-items: flex-start;
     justify-content: center;
     display: flex;
   }
+
   .hero-content-inner {
     text-align: left;
     align-items: flex-start;
-    padding: 3rem 2rem 3rem 3.5rem;
+    padding: var(--spacing-4xl) var(--spacing-2xl) var(--spacing-4xl) 3.5rem;
     background: none;
-    margin-top: 3rem;
+    margin-top: var(--spacing-4xl);
     width: 100%;
     box-sizing: border-box;
   }
+
   .hero-content-inner h1 {
-    font-size: 2.6rem;
+    font-size: var(--title-font-size-3xl);
     text-align: left;
   }
+
   .hero-content-inner p {
-    font-size: 1.18rem;
+    font-size: var(--text-font-size-xl);
     text-align: left;
   }
+
   .hero-buttons {
     flex-direction: row;
-    gap: 1.5rem;
+    gap: var(--spacing-xl);
     width: auto;
     align-items: flex-start;
     justify-content: flex-start;
   }
+
   .normativa-btn {
     background: var(--color-wine);
-    color: #fff;
+    color: var(--text-primary);
     padding: 0.85rem 2.2rem;
-    border-radius: 6px;
-    font-size: 1.08rem;
+    border-radius: var(--border-radius-sm);
+    font-size: var(--subtitle-font-size);
     font-weight: 600;
     min-width: 220px;
-  }
-}
-
-@media (max-width: 599px) {
-  .hero-buttons.hero-buttons--row {
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
   }
 } 

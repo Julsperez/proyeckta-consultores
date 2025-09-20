@@ -3,14 +3,14 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import './Footer.css';
 
 const servicios = [
-  { label: 'Servicio 1', to: '/servicios/seguridad-higiene' },
-  { label: 'Servicio 1', to: '/servicios/proteccion-civil' },
-  { label: 'Servicio 1', to: '/servicios/gestion-ambiental' },
-  { label: 'Servicio 1', to: '/servicios/certificaciones' },
+  { label: 'Estudios de ambiente laboral', to: '/servicios/ambiente-laboral' },
+  { label: 'Capacitación en normatividad', to: '/servicios/capacitacion' },
+  { label: 'Primeros auxilios', to: '/servicios/primeros-auxilios' },
 ];
 
 const navegacion = [
   { label: 'Inicio', to: '/#inicio' },
+  { label: 'Servicios', to: '/#servicios' },
   { label: 'Sobre Nosotros', to: '/#nosotros' },
   { label: 'Ubicación', to: '/#ubicacion' },
   { label: 'Contacto', to: '/#contacto' },

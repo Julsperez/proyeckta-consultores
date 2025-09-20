@@ -98,7 +98,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
       <div className="contact-grid">
         <div className="contact-img-block">
           <img
-            src={import.meta.env.BASE_URL + 'img/services/servicio_4_4.jpg'}
+            src={import.meta.env.BASE_URL + 'img/contacto.jpg'}
             alt="Oficina Proteckta"
             className="contact-img"
             loading="lazy"

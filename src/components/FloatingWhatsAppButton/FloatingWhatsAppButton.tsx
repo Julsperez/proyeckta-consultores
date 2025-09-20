@@ -8,17 +8,20 @@ interface FloatingWhatsAppButtonProps {
   message?: string;
   marginBottom?: string;
 }
+const baseUrl = import.meta.env.BASE_URL;
 
 const DEFAULT_URL =
   'https://wa.me/525620191598?text=Hola%2C%20me%20interesa%20una%20cotizaci%C3%B3n.';
-const DEFAULT_IMAGE = import.meta.env.BASE_URL + 'img/WhatsApp_icon.png';
+const DEFAULT_IMAGE = baseUrl + 'img/';
+const DEFAULT_ICON = 'WhatsApp_icon.png';
 const DEFAULT_COLOR = '#25d366';
-const DEFAULT_MESSAGE = 'Solicita una Cotización';
+const DEFAULT_MESSAGE = null;
 const DEFAULT_MARGIN_BOTTOM = '0rem';
+
 
 const FloatingWhatsAppButton: React.FC<FloatingWhatsAppButtonProps> = ({
   color = DEFAULT_COLOR,
-  image = DEFAULT_IMAGE,
+  image = DEFAULT_IMAGE + DEFAULT_ICON,
   url = DEFAULT_URL,
   message = DEFAULT_MESSAGE,
   marginBottom = DEFAULT_MARGIN_BOTTOM,
@@ -31,7 +34,9 @@ const FloatingWhatsAppButton: React.FC<FloatingWhatsAppButtonProps> = ({
       aria-label="WhatsApp"
       style={{ background: color, borderRadius: '50%' }}
     >
-      <span>{message}</span>
+      {message && (
+        <span>{message}</span>
+      )}
       <img
         src={image}
         alt="WhatsApp"

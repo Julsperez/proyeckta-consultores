@@ -31,43 +31,34 @@ const About: React.FC = () => {
         <div className="about__content">
           <h2 className="about__title">Sobre Nosotros</h2>
 
-          {/* <p className="about__lead">
-            En <strong>Proteckta</strong> somos especialistas en
-            <strong> Seguridad e Higiene Ocupacional</strong>, <strong>Protección Civil</strong>,
-            <strong> Gestión Ambiental</strong> y <strong>Certificaciones Internacionales</strong>.
-            Nuestra misión es ayudarte a cumplir con la normatividad vigente, prevenir riesgos y
-            construir entornos laborales seguros, sostenibles y competitivos.
-          </p>
-
-          <p className="about__text">
-            Contamos con un equipo de ingenieros y consultores registrados como
-            <strong> Agentes Capacitadores Externos (DC5) ante la STPS</strong>, por lo que cada curso
-            y programa cuenta con <strong>validez oficial</strong> y un enfoque práctico que impacta de
-            forma real en la operación de nuestros clientes.
+          <p className="about__lead">
+            Brindamos asesoría integral en seguridad, higiene ocupacional y medio ambiente, 
+            diseñada para apoyar a industrias, instituciones públicas y centros de trabajo. 
+            Nuestras soluciones contribuyen a prevenir riesgos, reducir costos operativos y elevar la productividad, 
+            manteniendo como prioridad la salud y seguridad del capital humano.
           </p>
 
           <div className="about__grid">
             <div className="about__block">
               <h3 className="about__subtitle">Nuestra Misión</h3>
               <p>
-                Asegurar que las empresas cumplan con normas de seguridad laboral, protección civil
-                y medio ambiente; minimizando riesgos legales y operativos, y fortaleciendo la
-                cultura de prevención y responsabilidad social.
+              Nos distinguimos por ser una organización enfocada en posicionarse como un referente en el mercado. 
+              Nuestro compromiso es brindar a los clientes un servicio con altos estándares de calidad mediante buenas prácticas profesionales, 
+              contamos con un equipo altamente capacitado.
               </p>
             </div>
 
             <div className="about__block">
               <h3 className="about__subtitle">Nuestra Visión</h3>
               <p>
-                Ser el aliado estratégico más confiable para organizaciones que buscan crecer de
-                forma segura, sustentable y en cumplimiento con regulaciones nacionales e
-                internacionales.
+              Buscamos ser reconocidos como una entidad que establece estándares de excelencia en la atención a sus clientes, 
+              destacando por la implementación de prácticas responsables y el estricto cumplimiento de la normatividad y regulaciones aplicables.
               </p>
             </div>
-          </div> */}
+          </div>
 
 
-          <div className="about__cta" style={{ display: 'flex', flexDirection: 'row', gap: '1rem', justifyContent: 'center', alignItems: 'center' }}>
+          <div className="about__cta about__cta--row">
             <button type="button" className="btn btn--primary" onClick={() => handleSectionNav('#servicios')}>
               Conoce nuestros servicios
             </button>
