@@ -48,7 +48,6 @@ const Hero: React.FC = () => {
   // Escucha cuando se agenda un evento
   useCalendlyEventListener({
     onEventScheduled: (e) => {
-      console.log("Evento agendado:", e.data.payload);
       setOpen(false); // cierra el modal automáticamente
       setShowConfirmation(true);
       setTimeout(() => setShowConfirmation(false), 3000);

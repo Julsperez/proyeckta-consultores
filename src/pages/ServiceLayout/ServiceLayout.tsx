@@ -12,7 +12,7 @@ const ServiceLayout: React.FC = () => {
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [open, setOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const autoplayInterval = 4000; // ms, puedes hacerlo configurable si lo deseas
+  const autoplayInterval = 5000; // 5 segundos
   const autoplay = true; // puedes hacerlo configurable si lo deseas
   const slideTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -40,11 +40,13 @@ const ServiceLayout: React.FC = () => {
   };
   const prevSlide = (e?: React.MouseEvent) => {
     if (e) e.preventDefault();
-    // setCurrentSlide((prev) => (prev - 1 + svc.carousel.length) % svc.carousel.length);
+    if (!svc) return;
+    setCurrentSlide((prev) => (prev - 1 + svc.carousel.length) % svc.carousel.length);
   };
   const nextSlide = (e?: React.MouseEvent) => {
     if (e) e.preventDefault();
-    // setCurrentSlide((prev) => (prev + 1) % svc.carousel.length);
+    if (!svc) return;
+    setCurrentSlide((prev) => (prev + 1) % svc.carousel.length);
   };
 
   if (!svc) {
@@ -80,12 +82,16 @@ const ServiceLayout: React.FC = () => {
               className="service-description"
               dangerouslySetInnerHTML={{ __html: svc.description }}
             />
-            <div>
-              <a href="https://google.com.mx" style={{ color: '#0056b3', textDecoration: 'underline', fontWeight: 'bold' }}>
-                Solicita nuestro catálogo de normatividad
-              </a>
-              <span> que cubrimos o pregunta por el servicio que requieres.</span>
-            </div>
+            {svc.id != 'primeros-auxilios' && (
+              <div>
+                <a href="https://google.com.mx" style={{ color: '#0056b3', textDecoration: 'underline', fontWeight: 'bold' }}>
+                  Solicita nuestro catálogo de normatividad
+                </a>
+                <span> que cubrimos o pregunta por el servicio que requieres.</span>
+              </div>
+              )
+            }
+            <br />
             <h2>El servicio incluye:</h2>
             <ul className="service-highlights">
               <strong>
@@ -95,9 +101,16 @@ const ServiceLayout: React.FC = () => {
                 <li>Entre otros servicios más.</li>
               </strong>
             </ul>
-            
+            <br />
+            <h2>Ventajas de este servicio:</h2>
+            <ul className="service-highlights service-advantages">
+                {svc.highlights.map((h, i) => (
+                  <li key={i}>{h}</li>
+                ))}
+            </ul>
           </section>
 
+          <br />
           <aside className="service-image-block">
             {/* Carousel start */}
             {svc && svc.carousel && svc.carousel.length > 0 && (
@@ -162,7 +175,7 @@ const ServiceLayout: React.FC = () => {
               </button>
             )}
             <PopupModal
-              url="https://calendly.com/alejan_carballo"
+              url="https://calendly.com/angel9pacheco"
               rootElement={document.getElementById("footer-service-layout") as HTMLElement}
               open={open}
               onModalClose={() => setOpen(false)}
