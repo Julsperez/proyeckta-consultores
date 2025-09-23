@@ -15,7 +15,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
     <div>{children}</div>
     
     <FloatingWhatsAppButton marginBottom='5rem'/>
-    <FloatingWhatsAppButton color='#2591d3' message='Normativas' url='https://google.com.mx' image='img/file-60.png' />
+    <FloatingWhatsAppButton color='#2591d3' message='Normativas' url='https://drive.google.com/drive/folders/1AiSyqbAscj7rg-RU4ced-C3SyzejwHkU' button="normativa"/>
     <Footer />
   </>
 );

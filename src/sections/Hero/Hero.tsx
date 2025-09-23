@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
 
   // Escucha cuando se agenda un evento
   useCalendlyEventListener({
-    onEventScheduled: (e) => {
+    onEventScheduled: () => {
       setOpen(false); // cierra el modal automáticamente
       setShowConfirmation(true);
       setTimeout(() => setShowConfirmation(false), 3000);
@@ -101,7 +101,7 @@ const Hero: React.FC = () => {
                 ¡Agenda una Cotización!
               </button>
             )}
-            <a className="normativa-btn normativa-btn--orange" href="https://google.com.mx">
+            <a className="normativa-btn normativa-btn--orange" href="https://drive.google.com/drive/folders/1AiSyqbAscj7rg-RU4ced-C3SyzejwHkU" target="_blank">
               Consulta nuestras normativas
             </a>
             <PopupModal

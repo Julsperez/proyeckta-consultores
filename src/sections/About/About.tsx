@@ -62,7 +62,7 @@ const About: React.FC = () => {
             <button type="button" className="btn btn--primary" onClick={() => handleSectionNav('#servicios')}>
               Conoce nuestros servicios
             </button>
-            <a className="normativa-btn" href="https://google.com.mx">
+            <a className="normativa-btn" href="https://drive.google.com/drive/folders/1AiSyqbAscj7rg-RU4ced-C3SyzejwHkU" target="_blank">
               Consulta nuestras normativas
             </a>
           </div>

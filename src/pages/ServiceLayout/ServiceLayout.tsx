@@ -84,7 +84,7 @@ const ServiceLayout: React.FC = () => {
             />
             {svc.id != 'primeros-auxilios' && (
               <div>
-                <a href="https://google.com.mx" style={{ color: '#0056b3', textDecoration: 'underline', fontWeight: 'bold' }}>
+                <a href={`${svc.webUrl}`} style={{ color: '#0056b3', textDecoration: 'underline', fontWeight: 'bold' }} target="_blank">
                   Solicita nuestro catálogo de normatividad
                 </a>
                 <span> que cubrimos o pregunta por el servicio que requieres.</span>
@@ -181,7 +181,7 @@ const ServiceLayout: React.FC = () => {
               onModalClose={() => setOpen(false)}
             />
           </div>
-          <a className="normativa-btn" href="https://google.com.mx" style={{marginTop: '1rem', marginBottom: '1rem'}}>
+          <a className="normativa-btn" href="https://drive.google.com/drive/folders/1AiSyqbAscj7rg-RU4ced-C3SyzejwHkU" style={{marginTop: '1rem', marginBottom: '1rem'}} target="_blank">
             Consulta nuestras normativas
           </a>
       </footer>

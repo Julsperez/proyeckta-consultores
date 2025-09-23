@@ -1,6 +1,7 @@
 export interface Service {
   id: string;
   title: string;
+  webUrl?: string;
   /** HTML string renderizable en el layout */
   description: string;
   highlights: string[];
@@ -13,6 +14,7 @@ const services: Service[] = [
   {
     id: "ambiente-laboral",
     title: "Estudios de ambiente laboral",
+    webUrl: "https://drive.google.com/drive/folders/1tRMlll66rtqg8gyJNe09YvWqLWkooPdE",
     description: `
       Nos comprometemos a que tu centro de trabajo cuente con un entorno laboral seguro, saludable y conforme a la normativa vigente. Para lograrlo, desarrollamos diagnósticos integrales, elaboramos la documentación requerida y brindamos asesoría personalizada que facilita la atención de auditorías o revisiones por parte de organismos públicos.
       Asimismo, te acompañamos en la evaluación de las condiciones laborales y en la implementación de medidas correctivas, con el propósito de que obtengas dictámenes favorables emitidos por Unidades de Verificación acreditadas por la EMA y reconocidas por la STPS.
@@ -43,6 +45,7 @@ const services: Service[] = [
   {
     id: "capacitacion",
     title: "Capacitación en normatividad.",
+    webUrl: "https://drive.google.com/drive/folders/154efMencMb9a93ucClCWXDaZS1EBxuNA",
     description: `
       Nos enfocamos en fortalecer las competencias de los trabajadores mediante programas de capacitación diseñados conforme a la normatividad vigente y las necesidades específicas de tu centro de trabajo. Elaboramos planes de formación, generamos la documentación que respalda cada curso y damos seguimiento a la aplicación práctica de los conocimientos adquiridos, impulsando mejoras en el desempeño y la productividad.
     `,
