@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './Header.css';
 
-const baseUrl = import.meta.env.BASE_URL;
+// const baseUrl = import.meta.env.BASE_URL;
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,7 +34,7 @@ const Header: React.FC = () => {
     <header className="header">
       <div className="header-container">
         <div className="logo-area">
-          <button
+          {/* <button
             type="button"
             className="logo-link logo-btn"
             aria-label="Inicio"
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
               height={50}
               style={{ maxHeight: 50 }}
             />
-          </button>
+          </button> */}
           <span className="brand-name">Proteckta </span>
         </div>
         <button

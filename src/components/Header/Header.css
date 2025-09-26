@@ -43,8 +43,8 @@
 }
 
 .brand-name {
-  font-size: 0.92rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 800;
   color: var(--color-azul-marino);
   white-space: nowrap;
   margin-left: 0.25rem;
@@ -205,8 +205,8 @@
     margin-right: 2rem;
   }
   .brand-name {
-    font-size: 0.82rem;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 800;
     color: var(--color-azul-marino);
     margin-left: 0;
     margin-top: 0.15rem;
