@@ -91,7 +91,11 @@ const services: Service[] = [
     ],
     image: "img/servicios/servicio_3_1.jpg",
     carousel : [
-      "img/servicios/servicio_3_1.jpg"
+      "img/servicios/servicio_3_1.jpg",
+      "img/servicios/servicio_3_2.jpg",
+      "img/servicios/servicio_3_3.jpg",
+      "img/servicios/servicio_3_4.jpg"
+
     ]
   }
 ];
