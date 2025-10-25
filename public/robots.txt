@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://proteckta.com.mx/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin areas (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all other content
+Allow: /img/
+Allow: /css/
+Allow: /js/

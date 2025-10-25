@@ -27,7 +27,7 @@ const Services: React.FC = () => {
   return (
     <section className="services" id="servicios">
       <h2 className="services-title">
-        Somos expertos en <span className="accent">todos nuestros servicios</span>
+        Somos expertos en <span className="accent">consultoría en seguridad e higiene ocupacional</span>
       </h2>
       <div className="services-grid">
         {services.map((s) => (
@@ -35,7 +35,7 @@ const Services: React.FC = () => {
             <div className="service-img-container">
               <img
                 src={import.meta.env.BASE_URL + s.img}
-                alt={s.title}
+                alt={`${s.title} - Consultoría en seguridad e higiene ocupacional México`}
                 className="service-img"
                 loading="lazy"
               />

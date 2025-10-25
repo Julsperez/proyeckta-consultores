@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
         )}
         <img
           src={bgImage}
-          alt="Consultoría en Seguridad e higiene, Protección Civil y Gestión Ambiental"
+          alt="Consultoría en Seguridad e Higiene Ocupacional, Protección Civil y Gestión Ambiental en México - Proteckta Consultores"
           className={`hero-img hero-img-layer${showFadeIn ? ' fade-in' : ''}`}
           loading="eager"
           aria-hidden="true"
@@ -82,10 +82,13 @@ const Hero: React.FC = () => {
         <div className="hero-content-inner">
           <h1>
             Consultoría en Seguridad e Higiene Ocupacional,<br />
-            Protección Civil y Gestión Ambiental
+            Protección Civil y Gestión Ambiental en México
           </h1>
           <p>
-            Generamos confianza a través de cumplimiento normativo, capacitación con validez oficial y atención inmediata.
+            <b>
+              Especialistas en estudios de ambiente laboral, capacitación en normatividad STPS y primeros auxilios industriales.
+              Generamos confianza a través de cumplimiento normativo, capacitación con validez oficial y atención inmediata.
+            </b>
           </p>
           <div className="hero-buttons hero-buttons--row">
             {showConfirmation ? (

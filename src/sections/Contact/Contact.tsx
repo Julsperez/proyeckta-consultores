@@ -90,16 +90,17 @@ const ContactForm: React.FC<ContactFormProps> = ({
   return (
     <section className="contact-section" id="contacto">
       <div className="contact-header">
-        <h1>Contáctanos</h1>
+        <h2>Contáctanos para Consultoría en Seguridad e Higiene Ocupacional</h2>
         <p className="contact-lead">
-          ¿Tienes dudas o comentarios? Completa el formulario y nuestro equipo te responderá lo antes posible.
+          <b>¿Necesitas estudios de ambiente laboral, capacitación en normatividad STPS o primeros auxilios industriales?</b> <br />
+          Completa el formulario y nuestro equipo de expertos te responderá lo antes posible.
         </p>
       </div>
       <div className="contact-grid">
         <div className="contact-img-block">
           <img
             src={import.meta.env.BASE_URL + 'img/contacto.jpg'}
-            alt="Oficina Proteckta"
+            alt="Oficina Proteckta Consultores - Consultoría en Seguridad e Higiene Ocupacional México"
             className="contact-img"
             loading="lazy"
             width={600}
@@ -168,7 +169,8 @@ const ContactForm: React.FC<ContactFormProps> = ({
             aria-busy={status === 'sending'}
           >
             <p className="contact-form-lead">
-              ¿Tienes una pregunta o comentario? Llena el formulario y te contactaremos pronto.
+              <b>¿Necesitas consultoría en seguridad e higiene ocupacional?</b> <br /> <br />
+              Solicita información sobre nuestros servicios de estudios de ambiente laboral, capacitación en normatividad STPS y primeros auxilios industriales.
             </p>
             <div className="contact-form-row">
               <input

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './Header.css';
 
-// const baseUrl = import.meta.env.BASE_URL;
+const baseUrl = import.meta.env.BASE_URL;
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,21 +34,19 @@ const Header: React.FC = () => {
     <header className="header">
       <div className="header-container">
         <div className="logo-area">
-          {/* <button
+          <button
             type="button"
             className="logo-link logo-btn"
             aria-label="Inicio"
             onClick={() => handleSectionNav('#inicio')}
           >
             <img
-              src={`${baseUrl}img/proteckta_logo.png`}
-              alt="Logo Proteckta "
+              src={`${baseUrl}proteckta_logo.png`}
+              alt="Logo Proteckta Consultores - Consultoría en Seguridad e Higiene Ocupacional"
               className="header-logo"
-              height={50}
-              style={{ maxHeight: 50 }}
             />
-          </button> */}
-          <span className="brand-name">Proteckta </span>
+          </button>
+          {/* <span onClick={() => handleSectionNav('#inicio')} className="brand-name">Proteckta </span> */}
         </div>
         <button
           className={`menu-toggle${menuOpen ? ' open' : ''}`}

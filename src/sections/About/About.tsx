@@ -32,10 +32,10 @@ const About: React.FC = () => {
           <h2 className="about__title">Sobre Nosotros</h2>
 
           <p className="about__lead">
-            Brindamos asesoría integral en seguridad, higiene ocupacional y medio ambiente, 
+            Brindamos asesoría integral en seguridad e higiene ocupacional, protección civil y gestión ambiental en México, 
             diseñada para apoyar a industrias, instituciones públicas y centros de trabajo. 
             Nuestras soluciones contribuyen a prevenir riesgos, reducir costos operativos y elevar la productividad, 
-            manteniendo como prioridad la salud y seguridad del capital humano.
+            manteniendo como prioridad la salud y seguridad del capital humano mediante cumplimiento normativo STPS.
           </p>
 
           <div className="about__grid">
